@@ -1,0 +1,61 @@
+.contact-info{
+  font-size: 12px;
+}
+.nav-links{
+  font-size: 19px;
+  font-weight: 500;
+  color: #428af0 !important;
+
+}
+.nav-links:hover{
+  color:green !important ;
+}
+.nav-items{
+  margin-right:80px;
+  padding: 5px;
+}
+.nav-icon{
+  margin-right: 15px;
+}.cart{
+  top: 1rem;
+  right: 3.3rem;
+  padding: 0px 6px;
+  font-size: small;
+  background: rgb(156, 147, 147);
+}
+.nav-bg{
+  background-color: rgb(250, 216, 165);
+}
+.user{
+  top: 1rem;
+  right: .6rem;
+  padding: 0px 6px;
+  font-size: small;
+  background: rgb(156, 147, 147);
+}
+.s-image{
+  padding: 20px;
+   width: 450px;
+  margin-right:1px ;
+  height: 500px;
+}
+.deal{
+  font-size: 60px;
+}
+.description{
+  font-size: 40px;
+  line-height: 45px;
+}
+.p-info{
+  font-size: 20px;
+  line-height: 30px;
+}
+.background{
+  background-color: #ece4e2;
+}
+.title{
+  font-size: 60px;
+}
+.carousel-inner{
+  background-color: #ece4e2;
+}
