@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterate over cart items and display each one -->
+      {% for item in cart_items %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>
+            <input type="number" value="{{ item.quantity }}" min="1" max="10">
+            <button class="update-button" data-product="{{ item.name }}">Update</button>
+          </td>
+          <td>{{ item.price * item.quantity }}</td>
+          <td><button class="remove-button" data-product="{{ item.name }}">Remove</button></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"></td>
+        <td><strong>Total:</strong></td>
+        <td>{{ cart_total }}</td>
+      </tr>
+    </tfoot>
+  </table>
+  <button class="checkout-button">Checkout</button>
+
+  <script>
+    const updateButtons = document.querySelectorAll('.update-button');
+    updateButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const productName = button.dataset.product;
+        const quantityInput = button.previousElementSibling;
+        const quantity = parseInt(quantityInput.value);
+        // Update cart item quantity (replace with your own code)
+        console.log(`Updating quantity of ${productName} to ${quantity}`);
+      });
+    });
+
+    const removeButtons = document.querySelectorAll('.remove-button');
+    removeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const productName = button.dataset.product;
+        // Remove cart item (replace with your own code)
+        console.log(`Removing ${productName} from cart`);
+      });
+    });
+
+    const checkoutButton = document.querySelector('.checkout-button');
+    checkoutButton.addEventListener('click', () => {
+      // Redirect to checkout page (replace with your own code)
+      console.log('Redirecting to checkout page');
+    });
+  </script>
+</body>
+</html>
